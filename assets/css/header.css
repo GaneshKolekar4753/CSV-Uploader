@@ -1,4 +1,10 @@
 .header-container{
-    background-color: #083190;
+    background-image: linear-gradient(to right, rgba(255,0,0,0), rgb(13, 162, 5));
     width: 100%;
+
+}
+
+i{
+    font-size: 1.5em;
+    color: rgb(4, 76, 4);
 }

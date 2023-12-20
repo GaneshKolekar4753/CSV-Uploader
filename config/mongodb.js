@@ -1,6 +1,6 @@
 const mongoose=require('mongoose');
 
-mongoose.connect('mongodb://localhost/issuetracker_development');
+mongoose.connect('mongodb://localhost/CSV-Upload');
 
 const db=mongoose.connection;
 
