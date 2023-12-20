@@ -1,6 +1,6 @@
 const mongoose=require('mongoose');
 const mongoDbURI=process.env.MONGODB_URI;
-mongoose.connect(`${mongoDbURI}issue-tracker`);
+mongoose.connect(mongoDbURI);
 
 const db=mongoose.connection;
 
