@@ -1,6 +1,6 @@
 const mongoose=require('mongoose');
 const mongoDbURI=process.env.MONGODB_URI;
-mongoose.connect(mongoDbURI);
+mongoose.connect(`${mongoDbURI}csv-uploades`);
 
 const db=mongoose.connection;
 
