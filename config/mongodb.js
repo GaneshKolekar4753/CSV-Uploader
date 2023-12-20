@@ -1,6 +1,6 @@
 const mongoose=require('mongoose');
-
-mongoose.connect('mongodb://localhost/CSV-Upload');
+const mongoDbURI=process.env.MONGODB_URI;
+mongoose.connect(`${mongoDbURI}issue-tracker`);
 
 const db=mongoose.connection;
 

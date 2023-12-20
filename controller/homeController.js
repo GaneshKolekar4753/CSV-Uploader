@@ -40,6 +40,7 @@ module.exports.uploadFile = async function (req, res) {
         //inserting the converted JSON to DB
         let csvFile =await  CSVFile.create({
           fileName: req.file.originalname,
+          storageFilename:req.file.filename,
           file: conversedFile.data,
         });
         console.log('file uploaded successfully');
@@ -58,3 +59,6 @@ module.exports.uploadFile = async function (req, res) {
     }
   });
 };
+
+
+

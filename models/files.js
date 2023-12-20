@@ -9,6 +9,10 @@ const fileSchema=new mongoose.Schema({
         type: String,
         required: true
     },
+    storageFilename:{
+      type:String,
+      required:true
+    },
     file:{
         type:Array
     }

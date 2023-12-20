@@ -1,5 +1,6 @@
 const CSVFile = require("../models/files");
-
+const fs = require('fs');
+const path=require('path');
 
 //show CSV file data
 module.exports.showFile = async (req, res) => {
@@ -17,6 +18,7 @@ module.exports.deleteFile = async (req, res) => {
   try {
     let deleteCSV = await CSVFile.findByIdAndDelete(req.params.id);
     if (deleteCSV) {
+      fs.unlinkSync(path.join(__dirname,'..',CSVFile.csvPath +'/'+ deleteCSV.storageFilename));
       console.log("CSV removed successfully ");
       return res.redirect("back");
     } else {
