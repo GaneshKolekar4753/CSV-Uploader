@@ -3,8 +3,8 @@ const fileController=require('../controller/fileController');
 
 const router=express.Router();
 
-router.get('/view',fileController.showFile);
+router.get('/view/:id',fileController.showFile);
 
-router.get('/delete',fileController.deleteFile);
+router.get('/delete/:id',fileController.deleteFile);
 
 module.exports= router;

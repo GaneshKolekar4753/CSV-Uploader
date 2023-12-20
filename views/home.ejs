@@ -10,12 +10,15 @@
   </form>
 
   <!-- show all uploaded files -->
-  <div class="uploaded-files">
-    <ul>
-      <a href="/file/view/">file1</a>
-      <a href="/file/delete/"><i class="fa-solid fa-trash"></i></a>
-    </ul>
-  </div>
+  <% for(let file of files){%> 
+    <div class="uploaded-files">
+      <ul>
+        <a href="/file/view/<%= file._id %>"><%= file.fileName %></a>
+        <a href="/file/delete/<%= file._id %>"><i class="fa-solid fa-trash"></i></a>
+      </ul>
+    </div>
+    <%}%>
+ 
 
 </div>
 
